@@ -1,0 +1,3 @@
+# Integer Overflow in Assembly Memory Access
+
+This repository demonstrates a potential integer overflow vulnerability in assembly code that leads to memory access violations. The bug occurs in the instruction `mov eax, [ebx + esi * 4 + 0x10]`, where the address calculation can overflow if the values of `ebx`, `esi`, or the constant 0x10 are sufficiently large.  The solution demonstrates how to mitigate this risk by adding checks to ensure the resulting address falls within the valid memory range.
